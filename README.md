@@ -1,4 +1,4 @@
-# BabiHost API
+# BabiHost 
 
 A **premium hospitality and accommodation booking platform** backend, connecting travelers with unique lodging experiences. BabiHost provides **verified property listings**, **secure booking systems**, and **host verification services** to ensure trust and reliability between hosts and guests.
 
