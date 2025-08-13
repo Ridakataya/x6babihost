@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('reviews', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+        Schema::create('room_amenities', function (Blueprint $table) {
             $table->foreignId('room_id')->constrained()->onDelete('cascade');
-            $table->foreignId('property_id')->constrained()->onDelete('cascade');
-            $table->tinyInteger('rating')->unsigned()->checkBetween('1-5');
-            $table->text('comment')->nullable();
+            $table->foreignId('amenity_id')->constrained()->onDelete('cascade');
             $table->timestamps();
-        });
+            $table->primary(['room_id', 'amenity_id']);
+            });
     }
 
     /**
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('reviews');
+        Schema::dropIfExists('room_amenities');
     }
 };
