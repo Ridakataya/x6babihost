@@ -85,7 +85,7 @@ class User extends Authenticatable
      */
     public function bookings(): HasMany
     {
-        return $this->hasMany(Booking::class);
+        return $this->hasMany(Booking::class , 'traveler_id');
     }
 
     /**
@@ -93,7 +93,7 @@ class User extends Authenticatable
      */
     public function reviews(): HasMany
     {
-        return $this->hasMany(Review::class);
+        return $this->hasMany(Review::class , 'traveler_id');
     }
 
     /**

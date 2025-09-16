@@ -3,6 +3,9 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\Models\Availability;
+
+
 
 class TestCommand extends Command
 {
@@ -11,7 +14,7 @@ class TestCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'app:test-command';
+    protected $signature = 'app:test';
 
     /**
      * The console command description.
@@ -23,8 +26,16 @@ class TestCommand extends Command
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): never
     {
-        //
+        // Your command logic here
+        //$availabilities = Availability::where('is_available', 1)->get();
+        //$this->info('availabilities: ');
+
+       // dd(vars: $availabilities->toArray());
+
+       $availabilities = Availability::all();
+       $this->info('availabilities: ');
+         dd(vars: $availabilities);
     }
 }
