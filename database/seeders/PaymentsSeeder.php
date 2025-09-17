@@ -14,6 +14,7 @@ class PaymentsSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('payments')->truncate();
         DB::table('payments')->insert([
             [
                 'id' => 1,

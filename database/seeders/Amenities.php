@@ -14,6 +14,7 @@ class Amenities extends Seeder
      */
     public function run(): void
     {
+        DB::table('amenities')->truncate();
         DB::table('amenities')->insert([
             [
                 'id' => 1,

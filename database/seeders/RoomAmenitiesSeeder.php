@@ -14,6 +14,7 @@ class RoomAmenitiesSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('room_amenities')->truncate();
         DB::table('room_amenities')->insert([
             // Master Suite (Room 1) amenities
             ['room_id' => 1, 'amenity_id' => 1, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()], // WiFi

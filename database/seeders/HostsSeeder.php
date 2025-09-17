@@ -14,6 +14,7 @@ class HostsSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('hosts')->truncate();
         DB::table('hosts')->insert([
             [
                 'id' => 1,

@@ -14,10 +14,12 @@ class BookingsSeeder extends Seeder
      */
     public function run(): void
     {
+        
+        DB::table('bookings')->truncate();
         DB::table('bookings')->insert([
             [
                 'id' => 1,
-                'user_id' => 4, // Mike Traveler
+                'traveler_id' => 4, // Mike Traveler
                 'room_id' => 1, // Master Suite
                 'check_in' => '2024-09-15',
                 'check_out' => '2024-09-20',
@@ -28,7 +30,7 @@ class BookingsSeeder extends Seeder
             ],
             [
                 'id' => 2,
-                'user_id' => 5, // Emma Traveler
+                'traveler_id' => 5, // Emma Traveler
                 'room_id' => 3, // Ocean View Suite
                 'check_in' => '2024-10-01',
                 'check_out' => '2024-10-05',
@@ -39,7 +41,7 @@ class BookingsSeeder extends Seeder
             ],
             [
                 'id' => 3,
-                'user_id' => 6, // David Guest
+                'traveler_id' => 6, // David Guest
                 'room_id' => 5, // Mountain Cabin Room
                 'check_in' => '2024-08-25',
                 'check_out' => '2024-08-30',
@@ -50,7 +52,7 @@ class BookingsSeeder extends Seeder
             ],
             [
                 'id' => 4,
-                'user_id' => 4, // Mike Traveler
+                'traveler_id' => 4, // Mike Traveler
                 'room_id' => 6, // Historic Loft
                 'check_in' => '2024-11-10',
                 'check_out' => '2024-11-15',
@@ -61,7 +63,7 @@ class BookingsSeeder extends Seeder
             ],
             [
                 'id' => 5,
-                'user_id' => 5, // Emma Traveler
+                'traveler_id' => 5, // Emma Traveler
                 'room_id' => 2, // Standard Room
                 'check_in' => '2024-12-20',
                 'check_out' => '2024-12-25',

@@ -14,6 +14,7 @@ class FavoritesSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('favorites')->truncate();
         DB::table('favorites')->insert([
             [
                 'id' => 1,

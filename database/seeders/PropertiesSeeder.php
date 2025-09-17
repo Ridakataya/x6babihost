@@ -14,6 +14,7 @@ class PropertiesSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('properties')->truncate();
         DB::table('properties')->insert([
             [
                 'id' => 1,

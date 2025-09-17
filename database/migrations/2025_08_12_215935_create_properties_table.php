@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('address');
             $table->string('city');
             $table->string('country');
-            $table->decimal('latitude', 10, 7);
-            $table->decimal('longitude', 10, 7);
+            $table->decimal('latitude', 10, 7)->nullable();
+            $table->decimal('longitude', 10, 7)->nullable();
             $table->boolean('verified')->default(false);
             $table->timestamps();
             $table->foreign('host_id')->references('id')->on('users')->onDelete('cascade');

@@ -14,6 +14,7 @@ class AvailabilitySeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('availabilities')->truncate();
         DB::table('availabilities')->insert([
             // Room 1 - Master Suite
             [

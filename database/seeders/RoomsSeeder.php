@@ -14,6 +14,7 @@ class RoomsSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('rooms')->truncate();
         DB::table('rooms')->insert([
             [
                 'id' => 1,

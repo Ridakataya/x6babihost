@@ -14,10 +14,11 @@ class ReviewsSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('reviews')->truncate();
         DB::table('reviews')->insert([
             [
                 'id' => 1,
-                'user_id' => 6, // David Guest (for completed booking)
+                'traveler_id' => 6, // David Guest (for completed booking)
                 'room_id' => 5, // Mountain Cabin Room
                 'property_id' => 1, // Assuming this is the property ID for the Mountain Cabin
                 'rating' => 5,
@@ -27,7 +28,7 @@ class ReviewsSeeder extends Seeder
             ],
             [
                 'id' => 2,
-                'user_id' => 4, // Mike Traveler (past guest)
+                'traveler_id' => 4, // Mike Traveler (past guest)
                 'room_id' => 1, // Master Suite (from a previous stay)
                 'property_id' => 2, // Assuming this is the property ID for the Master Suite
                 'rating' => 4,
@@ -37,7 +38,7 @@ class ReviewsSeeder extends Seeder
             ],
             [
                 'id' => 3,
-                'user_id' => 5, // Emma Traveler (past guest)
+                'traveler_id' => 5, // Emma Traveler (past guest)
                 'room_id' => 3, // Ocean View Suite (from a previous stay)
                 'property_id' => 3, // Assuming this is the property ID for the Ocean View Suite
                 'rating' => 5,
@@ -47,7 +48,7 @@ class ReviewsSeeder extends Seeder
             ],
             [
                 'id' => 4,
-                'user_id' => 4, // Mike Traveler (past guest)
+                'traveler_id' => 4, // Mike Traveler (past guest)
                 'room_id' => 6, // Historic Loft (from a previous stay)
                 'property_id' => 4, // Assuming this is the property ID for the Historic Loft
                 'rating' => 4,
@@ -57,7 +58,7 @@ class ReviewsSeeder extends Seeder
             ],
             [
                 'id' => 5,
-                'user_id' => 6, // David Guest (past guest)
+                'traveler_id' => 6, // David Guest (past guest)
                 'room_id' => 2, // Standard Room (from a previous stay)
                 'property_id' => 2, // Assuming this is the property ID for the Standard Room
                 'rating' => 3,
@@ -67,7 +68,7 @@ class ReviewsSeeder extends Seeder
             ],
             [
                 'id' => 6,
-                'user_id' => 5, // Emma Traveler (past guest)
+                'traveler_id' => 5, // Emma Traveler (past guest)
                 'room_id' => 4, // Beach Room (from a previous stay)
                 'property_id' => 4, // Assuming this is the property ID for the Beach Room
                 'rating' => 5,
