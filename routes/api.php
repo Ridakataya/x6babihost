@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\PropertyController;
 use App\Http\Controllers\API\RoomController;
+use App\Http\Controllers\API\HostController;
+use App\Http\Controllers\API\AmenityController;
+use App\Http\Controllers\API\BookingController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -27,3 +30,21 @@ Route::post('/rooms', [RoomController::class, 'store']);
 Route::get('/rooms/{id}', [RoomController::class, 'show']);
 Route::put('/rooms/{id}', [RoomController::class, 'update']);
 Route::delete('/rooms/{id}', [RoomController::class, 'destroy']);
+
+
+Route::get('/hosts/{id}/properties', [HostController::class, 'properties']);
+Route::post('/hosts', [HostController::class, 'store']);
+Route::get('/hosts/{id}', [HostController::class, 'show']);
+
+
+Route::get('/amenities', [AmenityController::class, 'index']);
+Route::post('/amenities', [AmenityController::class, 'store']);
+Route::get('/amenities/{id}', [AmenityController::class, 'show']);
+Route::delete('/amenities/{id}', [AmenityController::class, 'destroy']);
+
+
+Route::get('/bookings', [BookingController::class, 'index']);
+Route::post('/bookings', [BookingController::class, 'store']);
+Route::get('/bookings/{id}', [BookingController::class, 'show']);
+Route::put('/bookings/{id}', [BookingController::class, 'update']);
+Route::delete('/bookings/{id}', [BookingController::class, 'destroy']);
